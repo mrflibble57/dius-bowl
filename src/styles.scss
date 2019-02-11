@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+.error {
+  background: red;
+  border-radius: 4px;
+  padding: 8px;
+  > div {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.table {
+  > div {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 4px;
+    margin-right: 4px;
+
+    > div {
+      display: inline-block;
+      background: beige;
+      color: black;
+    }
+  }
+}
+
+.score {
+  background: gray;
+  padding: 8px;
+  border-radius: 4px;
+  > div {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+  }
+  > div:first-child {
+
+  }
+  > div:last-child {
+    font-weight: bold;
+  }
+}

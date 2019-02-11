@@ -1,27 +1,43 @@
 # DiusBowl
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+DiUS Bowl is a code test demonstration for DiUS, made rapidly to demonstrate programming skill. It simulates a one player bowling scoresheet.
 
-## Development server
+## Technology
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+DiUS Bowl is made with Angular 7 and has tests written in Karma.
 
-## Code scaffolding
+## Demonstrated in the Project:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* A project Structure designed for extensibility
+* UI Components
+* Communication patterns
+* Error handling
+* Inheritance
+* Testing
+* Minor levels of SASS
 
-## Build
+Not demonstrated:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Generics
+* Interfaces
+* E2E tests
+* GUI
+* Mobile/responsive design
+
+## Installation
+
+From your command line in the project directory, run `npm install` to obtain relevant packages not placed in this repository.
+
+## Running the Project
+
+Run `ng serve` for a server. Navigate to `http://localhost:4200/`.
+
+## Using the Project
+
+This project is keyboard-driven and has not been designed for mobile devices. 
+
+To add a score, simply press any number key from **0** to **9**, **X** to roll a strike or **Space** to send down a randomly generated ball. You will see the progress of your game on the screen. Once finished you must press **Enter** to start over (or you can reload the browser window at any time).
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
