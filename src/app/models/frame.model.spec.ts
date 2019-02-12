@@ -1,8 +1,6 @@
-import { TestBed } from '@angular/core/testing';
 import {Frame} from './frame.model';
 
 describe('Frame', () => {
-
 
   it('should be created', () => {
     const frame = new Frame();

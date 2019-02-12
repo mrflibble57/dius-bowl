@@ -1,10 +1,6 @@
-import { TestBed } from '@angular/core/testing';
-import {Frame} from './frame.model';
 import {Game} from './game.model';
-import {FrameLast} from './frame.last.model';
 
 describe('Game', () => {
-
 
   it('should be created', () => {
     const game = new Game();
@@ -16,7 +12,7 @@ describe('Game', () => {
     expect(game.complete).toBe(false);
   });
 
-  it('should confirm it is incomplete', () => {
+  it('should confirm it is complete', () => {
     const game = new Game();
     game.frame.score.push(2, 2);
     game.frame.score.push(2, 2);
@@ -30,6 +26,4 @@ describe('Game', () => {
     game.frame.score.push(2, 2);
     expect(game.complete).toBe(true);
   });
-
-
 });

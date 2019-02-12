@@ -1,8 +1,6 @@
-import { TestBed } from '@angular/core/testing';
 import {FrameLast} from './frame.last.model';
 
 describe('Last Frame', () => {
-
 
   it('should be created', () => {
     const frame = new FrameLast();

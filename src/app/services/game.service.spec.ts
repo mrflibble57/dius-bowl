@@ -1,4 +1,4 @@
-import {async, TestBed} from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
 import { GameService } from './game.service';
 
@@ -9,14 +9,22 @@ describe('GameService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.get(GameService);
+    service.start();
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
+  it('should error when a frame total is above 10', () => {
+    service.roll(8);
+    service.roll(8);
+    const sub = service.errorSubject.subscribe(val => {
+      expect(val).not.toBe('');
+    });
+  });
+
   it('should return 300', () => {
-    service.start();
     while (service.roll(10)) {}
     const sub = service.scoreSubject.subscribe(val => {
       expect(val).toBe(300);
@@ -24,7 +32,6 @@ describe('GameService', () => {
   });
 
   it('should return 80', () => {
-    service.start();
     while (service.roll(4)) {}
     const sub = service.scoreSubject.subscribe(val => {
       expect(val).toBe(80);
@@ -32,7 +39,6 @@ describe('GameService', () => {
   });
 
   it('should return 12', () => {
-    service.start();
     rolls(5, 5, 1, 0);
     const sub = service.scoreSubject.subscribe(val => {
       expect(val).toBe(12);
@@ -40,7 +46,6 @@ describe('GameService', () => {
   });
 
   it('should return 14', () => {
-    service.start();
     rolls(10, 1, 1);
     const sub = service.scoreSubject.subscribe(val => {
       expect(val).toBe(14);

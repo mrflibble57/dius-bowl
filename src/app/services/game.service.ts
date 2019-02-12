@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Frame} from '../models/frame.model';
 import {BehaviorSubject} from 'rxjs';
-import {FrameLast} from '../models/frame.last.model';
 import {Game} from '../models/game.model';
 
 @Injectable({
