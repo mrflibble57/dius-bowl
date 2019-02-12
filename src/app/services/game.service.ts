@@ -32,7 +32,7 @@ export class GameService {
    */
   roll(value: number) {
     if (!this.game.complete) {
-      const frame = this.game.playingFrame;
+      const frame = this.game.frame;
       if (value <= frame.available) {
         frame.score.push(value);
         this.score();
@@ -61,12 +61,12 @@ export class GameService {
     for (let x = 0; x < 10; x++) {
       let frameScore = scoringShots[pos];
       if (frameScore === 10) {                // a strike gets the bonus value of the two following shots
-        total += scoringShots[pos + 1] + scoringShots[pos + 2];
+        frameScore += scoringShots[pos + 1] + scoringShots[pos + 2];
         pos++;
       } else {
         frameScore += scoringShots[pos + 1];  // get the second ball in the frame
         if (frameScore === 10) {              // a spare gets the bonus value of the following shot
-          total += scoringShots[pos + 2];
+          frameScore += scoringShots[pos + 2];
         }
         pos += 2;
       }

@@ -2,7 +2,7 @@ import {async, TestBed} from '@angular/core/testing';
 
 import { GameService } from './game.service';
 
-describe('PlayService', () => {
+describe('GameService', () => {
   let service: GameService;
   const rolls = (... args) => { args.forEach(value => service.roll(value)); };
 

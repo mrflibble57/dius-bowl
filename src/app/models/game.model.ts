@@ -12,11 +12,11 @@ export class Game {
     this.frames.push(new FrameLast());
   }
 
-  get playingFrame() {
+  get frame() {
     return this.frames.filter(f => !f.complete)[0];
   }
 
   get complete() {
-    return this.frames.length === 10 && this.frames[9].complete;
+    return this.frames[9].complete;
   }
 }

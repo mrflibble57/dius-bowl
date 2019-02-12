@@ -18,17 +18,16 @@ describe('Game', () => {
 
   it('should confirm it is incomplete', () => {
     const game = new Game();
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
-    game.playingFrame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
+    game.frame.score.push(2, 2);
     expect(game.complete).toBe(true);
   });
 

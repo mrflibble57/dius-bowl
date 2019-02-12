@@ -1,11 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {ScoreComponent} from './components/score/score.component';
+import {TableComponent} from './components/table/table.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, ScoreComponent, TableComponent
       ],
     }).compileComponents();
   }));
@@ -16,16 +18,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dius-bowl'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('dius-bowl');
-  });
-
-  it('should render title in a h1 tag', () => {
+  it('should render DiUS Bowl in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to dius-bowl!');
+    expect(compiled.querySelector('h1').textContent).toContain('DiUS Bowl');
   });
 });
